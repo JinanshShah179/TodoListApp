@@ -13,7 +13,6 @@ This is a full-stack Todo List application with a **React** frontend and **Node.
 ## Live Demo
 
 The application is live on Vercel: [View the live app here](https://todo-list-app-peach-ten.vercel.app/).
-For API testing backend url is this [Backend](https://todolistapp-i76x.onrender.com).
 
 ## Sample Username and Password
 email : test@gmail.com
