@@ -13,7 +13,7 @@ const TodoList = () => {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/todos', {
+        const response = await axios.get('https://todolistapp-i76x.onrender.com/api/todos', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setTodos(response.data);
@@ -32,7 +32,7 @@ const TodoList = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/todos',
+        'https://todolistapp-i76x.onrender.com/api/todos',
         { text: newTodo },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
@@ -57,7 +57,7 @@ const TodoList = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/todos/${editTodo}`,
+        `https://todolistapp-i76x.onrender.com/api/todos/${editTodo}`,
         { text: editText },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
@@ -75,7 +75,7 @@ const TodoList = () => {
 
   const handleDeleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/todos/${id}`, {
+      await axios.delete(`https://todolistapp-i76x.onrender.com/api/todos/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTodos(todos.filter((todo) => todo._id !== id)); 
