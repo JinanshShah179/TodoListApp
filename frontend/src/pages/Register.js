@@ -16,7 +16,7 @@ function Register() {
     const userData = { name, email, password };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/register', userData);
+      const response = await axios.post('https://todolistapp-i76x.onrender.com/api/users/register', userData);
       toast.success('Registration successful!'); 
       setTimeout(() => {
         navigate('/login');         
